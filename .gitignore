@@ -1,21 +1,21 @@
-## Created by .ignore support plugin (hsz.mobi)
-#
-####需要上传的文件###
-#!src/*
-#pom.xml
+# Created by .ignore support plugin (hsz.mobi)
+
+###需要上传的文件###
+!src/*
+!pom.xml
 #my-spring-boot-service/src/main/resources/static/
 #my-spring-boot-service/src/main/resources/templates/
 #my-spring-boot-web/src/main/resources/static/
 #my-spring-boot-web/src/main/resources/templates/
-#my-spring-boot-domain/src/main/j
-##
-##
-##
-### 排除的不需要上传的文件##
-#*.iml
-#.idea/
-#target/
-#mvnw
-#mvnw.cmd
+my-spring-boot-domain/src/main/j
 #
 #
+#
+## 排除的不需要上传的文件##
+*.iml
+.idea/
+target/
+mvnw
+mvnw.cmd
+
+
