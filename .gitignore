@@ -1,14 +1,20 @@
 # Created by .ignore support plugin (hsz.mobi)
-!.gitignore
-.idea/
-my-spring-boot/.idea/
 
+###需要上传的文件###
+!src/*
+pom.xml
+my-spring-boot-service/src/main/resources/static/
+my-spring-boot-service/src/main/resources/templates/
+my-spring-boot-web/src/main/resources/static/
+my-spring-boot-web/src/main/resources/templates/
+
+#
+#
+#
+## 排除的不需要上传的文件##
+*.iml
+.idea/
+target/
 mvnw
 mvnw.cmd
-pom.xml
-src/
-!my-spring-boot-service/*
-!/my-spring-boot/*
-!my-spring-boot-web/*
-.gitignore
-*.iml
+
