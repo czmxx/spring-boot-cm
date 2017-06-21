@@ -1,0 +1,14 @@
+# Created by .ignore support plugin (hsz.mobi)
+!.gitignore
+.idea/
+my-spring-boot/.idea/
+
+mvnw
+mvnw.cmd
+pom.xml
+src/
+!my-spring-boot-service/*
+!/my-spring-boot/*
+!my-spring-boot-web/*
+.gitignore
+*.iml
