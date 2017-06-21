@@ -7,7 +7,7 @@ my-spring-boot-service/src/main/resources/static/
 my-spring-boot-service/src/main/resources/templates/
 my-spring-boot-web/src/main/resources/static/
 my-spring-boot-web/src/main/resources/templates/
-
+my-spring-boot-domain/src/main/j
 #
 #
 #
@@ -17,4 +17,5 @@ my-spring-boot-web/src/main/resources/templates/
 target/
 mvnw
 mvnw.cmd
+
 
