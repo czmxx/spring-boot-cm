@@ -12,31 +12,30 @@
     <description>Demo project for Spring Boot</description>
 
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.1.RELEASE</version>
+        <groupId>pom</groupId>
+        <artifactId>my-spring-boot-pom</artifactId>
+        <version>1.0-SNAPSHOT</version>
         <relativePath/>
     </parent>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.8</java.version>
-        <dubbo-spring-boot>1.0.0</dubbo-spring-boot>
-    </properties>
-
+    <!--<properties>-->
+    <!--<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
+    <!--<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>-->
+    <!--<java.version>1.8</java.version>-->
+    <!--</properties>-->
     <dependencies>
-
         <!-- Spring Boot Web 依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+            <version>${spring-boot}</version>
         </dependency>
 
         <!-- Spring Boot Test 依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
+            <version>${spring-boot}</version>
             <scope>test</scope>
         </dependency>
 
@@ -45,6 +44,13 @@
             <groupId>io.dubbo.springboot</groupId>
             <artifactId>spring-boot-starter-dubbo</artifactId>
             <version>${dubbo-spring-boot}</version>
+        </dependency>
+
+        <!--实体类 引入-->
+        <dependency>
+            <groupId>com.cmz.domain</groupId>
+            <artifactId>my-spring-boot-domain</artifactId>
+            <version>${my-spring-domain}</version>
         </dependency>
 
     </dependencies>
