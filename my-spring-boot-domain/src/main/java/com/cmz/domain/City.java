@@ -6,6 +6,8 @@ import java.io.Serializable;
  * Created by CHENZHANMEI on 2017/6/21 0021.
  */
 public class City implements Serializable {
+
+    private static final long serialVersionUID = -212121L;
     /**
      * 城市编号
      */

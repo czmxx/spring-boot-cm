@@ -5,17 +5,17 @@
 
     <groupId>com.cmz.domain</groupId>
     <artifactId>my-spring-boot-domain</artifactId>
-    <version>${my-spring}</version>
+    <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>my-spring-boot-domain</name>
     <description>实体对象</description>
 
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.1.RELEASE</version>
-        <relativePath>../my-spring-boot-pom</relativePath>
+        <groupId>pom</groupId>
+        <artifactId>my-spring-boot-pom</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <properties>
@@ -30,26 +30,23 @@
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <!--<scope>test</scope>-->
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
     </dependencies>
-
     <!--发布的到私服的配置-->
-    <distributionManagement>
-        <repository>
-            <id>nexus</id>
-            <name>maven-releases</name>
-            <url>http://120.25.106.62:8081/repository/maven-releases/</url>
-        </repository>
-        <snapshotRepository>
-            <id>nexus</id>
-            <name>maven-snapshots</name>
-            <url>http://120.25.106.62:8081/repository/maven-snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
-
+    <!--<distributionManagement>-->
+    <!--<repository>-->
+    <!--<id>nexus</id>-->
+    <!--<name>maven-releases</name>-->
+    <!--<url>http://120.25.106.62:8081/repository/maven-releases/</url>-->
+    <!--</repository>-->
+    <!--<snapshotRepository>-->
+    <!--<id>nexus</id>-->
+    <!--<name>maven-snapshots</name>-->
+    <!--<url>http://120.25.106.62:8081/repository/maven-snapshots/</url>-->
+    <!--</snapshotRepository>-->
+    <!--</distributionManagement>-->
     <build>
         <plugins>
             <plugin>

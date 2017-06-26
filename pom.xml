@@ -4,24 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.8</java.version>
-        <spring-boot-data-redis>1.5.1.RELEASE</spring-boot-data-redis>
-        <spring-boot>1.5.1.RELEASE</spring-boot>
-        <my-spring>0.0.1-SNAPSHOT</my-spring>
-        <dubbo-spring-boot>1.0.0</dubbo-spring-boot>
-    </properties>
-
     <groupId>pom</groupId>
     <artifactId>my-spring-boot-pom</artifactId>
-    <version>${my-spring}</version>
+    <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>my-spring-boot-pom</name>
-    <description>用于其他包提供一个maven</description>
-
+    <description>pom模块化管理</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -29,7 +18,30 @@
         <version>1.5.1.RELEASE</version>
     </parent>
 
+    <modules>
+        <module>my-spring-boot-common</module>
+        <module>my-spring-boot-service-api</module>
+        <module>my-spring-boot-service</module>
+        <module>my-spring-boot-domain</module>
+        <module>my-spring-boot-web</module>
+        <module>my-spring-boot-study</module>
+        <module>my-spring-boot</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <spring-boot-data-redis>1.5.1.RELEASE</spring-boot-data-redis>
+        <spring-boot>1.5.1.RELEASE</spring-boot>
+        <dubbo-spring-boot>1.0.0</dubbo-spring-boot>
+
+        <my-spring-boot-service-api>0.0.1-SNAPSHOT</my-spring-boot-service-api>
+        <my-spring-boot-common>0.0.1-SNAPSHOT</my-spring-boot-common>
+    </properties>
+
     <dependencyManagement>
+
         <dependencies>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -159,30 +171,31 @@
                 <artifactId>core</artifactId>
                 <version>3.2.0</version>
             </dependency>
-            <!--excel-->
-            <!--<dependency>-->
-            <!--<groupId>org.apache.poi</groupId>-->
-            <!--<artifactId>poi</artifactId>-->
-            <!--<version>3.9</version>-->
-            <!--</dependency>-->
             <dependency>
                 <groupId>org.apache.poi</groupId>
                 <artifactId>poi-ooxml</artifactId>
                 <version>3.15</version>
             </dependency>
 
+            <!--Spring boot processor 依赖包 -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-configuration-processor</artifactId>
                 <optional>true</optional>
             </dependency>
 
-            <!--自己发布的版本-->
+            <!-- springboot dubbo  依赖包 -->
             <dependency>
-                <groupId>com.cmz.domain</groupId>
-                <artifactId>my-spring-boot-domain</artifactId>
-                <version>${my-spring-domain}</version>
+                <groupId>io.dubbo.springboot</groupId>
+                <artifactId>spring-boot-starter-dubbo</artifactId>
+                <version>1.0.0</version>
             </dependency>
+
+            <!--<dependency>-->
+                <!--<groupId>com.cmz.domain</groupId>-->
+                <!--<artifactId>my-spring-boot-domain</artifactId>-->
+                <!--<version>0.0.1-SNAPSHOT</version>-->
+            <!--</dependency>-->
 
         </dependencies>
     </dependencyManagement>

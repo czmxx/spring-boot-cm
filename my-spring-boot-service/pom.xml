@@ -14,8 +14,8 @@
     <parent>
         <groupId>pom</groupId>
         <artifactId>my-spring-boot-pom</artifactId>
-        <version>1.0-SNAPSHOT</version>
-        <relativePath/>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <properties>
@@ -44,10 +44,22 @@
             <artifactId>spring-boot-starter-dubbo</artifactId>
         </dependency>
 
-        <!--实体类 引入-->
         <dependency>
             <groupId>com.cmz.domain</groupId>
             <artifactId>my-spring-boot-domain</artifactId>
+            <version>${my-spring-boot-common}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.cm.service.api</groupId>
+            <artifactId>my-spring-boot-service-api</artifactId>
+            <version>${my-spring-boot-service-api}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.czm</groupId>
+            <artifactId>my-spring-boot-common</artifactId>
+            <version>${my-spring-boot-common}</version>
         </dependency>
 
     </dependencies>
